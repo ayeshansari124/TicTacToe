@@ -20,7 +20,8 @@ This project provides a fun, interactive user experience that works seamlessly a
 
 # screenshot
 
-(screenshot.png)
+![Game Screenshot](screenshot.png)
+*Game screenshot showing the Tic-Tac-Toe board in action.*
 
 # Responsive Design
 
