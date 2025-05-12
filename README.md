@@ -4,6 +4,18 @@ A simple and responsive Tic-Tac-Toe game developed using **HTML**, **CSS**, and 
 The game is designed for two players, and it automatically detects winners, draws, and allows the game to be reset. 
 This project provides a fun, interactive user experience that works seamlessly across devices.
 
+# Summary
+
+This marks my Third repo
+- I created this using HTML, CSS AND JAVASCRIPT.
+- All the code is completely and rawly written by me.
+- The learning from this project is about the working and manipulation of DOM in javaScript.
+- Suggestion and contributions are most welcomed.
+- A small step towards building hopefully a good big project in the future.
+
+## Deployement
+https://ayeshastictactoe.netlify.app/
+
 ## Features
 
 - **Two-player mode**: Players take turns to place 'X' and 'O' on a 3x3 grid.
@@ -18,7 +30,7 @@ This project provides a fun, interactive user experience that works seamlessly a
 - **CSS3**: Handles the visual styling, layout, and responsiveness.
 - **JavaScript**: Implements the game logic, including turn-taking, win detection, and board reset.
 
-# screenshot
+# Screenshot
 
 ![Game Screenshot](screenshot.png)
 *Game screenshot showing the Tic-Tac-Toe board in action.*
@@ -38,9 +50,6 @@ The game interface is fully responsive, adjusting for different screen sizes:
 
 ## Contributing
 Contributions are welcome! If you would like to improve this game, please follow these steps:
-
-## Deployement
-https://ayeshastictactoe.netlify.app/
 
 ## Acknowledgments
 
