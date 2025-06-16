@@ -1,59 +1,56 @@
-# Tic-Tac-Toe Game
+# 🎮 Tic-Tac-Toe Game
 
-A simple and responsive Tic-Tac-Toe game developed using **HTML**, **CSS**, and **JavaScript**. 
-The game is designed for two players, and it automatically detects winners, draws, and allows the game to be reset. 
-This project provides a fun, interactive user experience that works seamlessly across devices.
+A simple and responsive Tic-Tac-Toe game developed using **HTML**, **CSS**, and **JavaScript**.  
+This two-player game automatically detects winners and draws, and includes a reset feature.  
+It provides a fun and interactive user experience across all devices.
 
-# Summary
+---
 
-This marks my Third repo
-- I created this using HTML, CSS AND JAVASCRIPT.
-- All the code is completely and rawly written by me.
-- The learning from this project is about the working and manipulation of DOM in javaScript.
-- Suggestion and contributions are most welcomed.
-- A small step towards building hopefully a good big project in the future.
+## 📌 Summary
 
-## Deployement
-https://ayeshastictactoe.netlify.app/
+This marks my **third repository**:
 
-## Features
+- Built with **HTML**, **CSS**, and **JavaScript**
+- Learned how to manipulate the **DOM** and structure interactive web pages
+- **Suggestions and contributions are most welcome!**
+- A small step toward building more advanced projects in the future
 
-- **Two-player mode**: Players take turns to place 'X' and 'O' on a 3x3 grid.
-- **Win detection**: Automatically checks for a winner (horizontal, vertical, or diagonal).
-- **Draw detection**: Declares the game a draw if all cells are filled without a winner.
-- **Reset functionality**: Allows players to restart the game at any time.
-- **Responsive design**: Optimized for desktop, tablet, and mobile devices.
+---
 
-## Technologies Used
+## 🚀 Deployment
 
-- **HTML5**: Provides the structure for the game.
-- **CSS3**: Handles the visual styling, layout, and responsiveness.
-- **JavaScript**: Implements the game logic, including turn-taking, win detection, and board reset.
+🔗 [Live Demo on Netlify](https://ayeshastictactoe.netlify.app/)
 
-# Screenshot
+---
 
-![Game Screenshot](screenshot.png)
-*Game screenshot showing the Tic-Tac-Toe board in action.*
+## ⚙️ Features
 
-# Responsive Design
+- **👥 Two-player mode** – Players take turns placing X and O on a 3x3 board
+- **✅ Win detection** – Automatically detects a win in rows, columns, or diagonals
+- **🤝 Draw detection** – Declares a draw if all cells are filled without a winner
+- **🔄 Reset option** – Restart the game anytime with one click
+- **📱 Responsive design** – Optimized for desktops, tablets, and mobile devices
 
-The game interface is fully responsive, adjusting for different screen sizes:
+---
 
-- **For screens larger than 800px**: The board occupies 70% of the width, with larger cells for better visibility.
-- **For screens smaller than 800px**: The game adjusts to fit smaller devices while maintaining readability.
-- **For screens smaller than 500px**: The layout further optimizes to ensure the game is playable on mobile devices, with reduced font sizes and optimized button sizes.
+## 🛠 Technologies Used
 
-# Media Queries
+- **HTML5** – Structuring the game layout
+- **CSS3** – Styling and responsive design
+- **JavaScript (Vanilla)** – Game logic, event handling, and DOM manipulation
 
-- **@media (max-width: 800px)**: Adjusts the container width and cell font size for medium-sized devices.
-- **@media (max-width: 500px)**: Further reduces the font size for mobile devices and ensures all elements are touch-friendly.
+---
 
-## Contributing
-Contributions are welcome! If you would like to improve this game, please follow these steps:
+## 🖼 Screenshot
+
+![Game Screenshot](screenshot.png)  
+*Example of the Tic-Tac-Toe board in action*
+
+---
 
 ## Acknowledgments
 
 - The project was developed as a simple, fun way to learn and apply **JavaScript** and **DOM manipulation**.
 - Inspiration was drawn from classic Tic-Tac-Toe games and web development tutorials.
 
-Enjoy the game, and feel free to explore or customize the code further! 🎮
+Enjoy the game, and feel free to explore or customize the code further! 🎮 
