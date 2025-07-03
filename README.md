@@ -1,56 +1,58 @@
 # 🎮 Tic-Tac-Toe Game
 
-A simple and responsive Tic-Tac-Toe game developed using **HTML**, **CSS**, and **JavaScript**.  
-This two-player game automatically detects winners and draws, and includes a reset feature.  
-It provides a fun and interactive user experience across all devices.
+A **responsive**, interactive Tic-Tac-Toe game built using **HTML**, **Tailwind CSS**, and **Vanilla JavaScript**.  
+This two-player browser game features live win/draw detection and a reset option, delivering a fun user experience on all screen sizes.
 
 ---
 
 ## 📌 Summary
 
-This marks my **third repository**:
-
-- Built with **HTML**, **CSS**, and **JavaScript**
-- Learned how to manipulate the **DOM** and structure interactive web pages
-- **Suggestions and contributions are most welcome!**
-- A small step toward building more advanced projects in the future
+- Developed using **HTML**, **Tailwind CSS**, and **JavaScript**
+- Learned **DOM manipulation**, event handling, and responsive layout design
+- Designed to be **clean, minimal, and accessible**
+- Open to **suggestions and contributions** to improve further!
 
 ---
 
-## 🚀 Deployment
+## 🚀 Live Demo
 
-🔗 [Live Demo on Netlify](https://ayeshastictactoe.netlify.app/)
+🌐 [Play the Game on Netlify](https://ayeshastictactoe.netlify.app/)
 
 ---
 
 ## ⚙️ Features
 
-- **👥 Two-player mode** – Players take turns placing X and O on a 3x3 board
-- **✅ Win detection** – Automatically detects a win in rows, columns, or diagonals
-- **🤝 Draw detection** – Declares a draw if all cells are filled without a winner
-- **🔄 Reset option** – Restart the game anytime with one click
-- **📱 Responsive design** – Optimized for desktops, tablets, and mobile devices
+- 👥 **Two-Player Mode** – Players alternate between `X` and `O` on a 3x3 board  
+- ✅ **Win Detection** – Automatically checks for winners (rows, columns, diagonals)  
+- 🤝 **Draw Recognition** – Displays draw if the board is full without a winner  
+- 🔄 **One-Click Reset** – Start a new game anytime  
+- 📱 **Fully Responsive** – Seamlessly adapts to mobile, tablet, and desktop screens  
 
 ---
 
 ## 🛠 Technologies Used
 
-- **HTML5** – Structuring the game layout
-- **CSS3** – Styling and responsive design
-- **JavaScript (Vanilla)** – Game logic, event handling, and DOM manipulation
+| Tech           | Description                              |
+|----------------|------------------------------------------|
+| **HTML5**      | Markup for the board and layout structure |
+| **Tailwind CSS** | Utility-first CSS for modern styling     |
+| **JavaScript (Vanilla)** | Logic for gameplay and DOM interaction |
 
 ---
 
-## 🖼 Screenshot
+## 🙏 Acknowledgments
 
-![Game Screenshot](screenshot.png)  
-*Example of the Tic-Tac-Toe board in action*
+- Inspired by classic Tic-Tac-Toe games and JavaScript learning challenges
+- Tailwind CSS made styling simple and consistent
+- Built as a fun, educational mini-project to strengthen **web development skills**
 
 ---
 
-## Acknowledgments
+## 📬 Feedback & Contributions
 
-- The project was developed as a simple, fun way to learn and apply **JavaScript** and **DOM manipulation**.
-- Inspiration was drawn from classic Tic-Tac-Toe games and web development tutorials.
+Feel free to fork, play, suggest features, or report bugs!  
+Your contributions are always welcome. Let's build better games together 🚀
 
-Enjoy the game, and feel free to explore or customize the code further! 🎮 
+---
+
+Enjoy the game and happy coding! 🎮
