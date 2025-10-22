@@ -7,7 +7,7 @@ interface BoardProps {
 
 export default function Board({ cells, onMove }: BoardProps) {
   return (
-    <div className="grid grid-cols-3 grid-rows-3 gap-2 w-[70%] aspect-square max-w-[300px] sm:max-w-[250px]">
+    <div className="grid grid-cols-3 grid-rows-3 gap-3 w-full max-w-[320px] sm:max-w-[280px] aspect-square">
       {cells.map((value, i) => (
         <Cell key={i} value={value} onClick={() => onMove(i)} />
       ))}
