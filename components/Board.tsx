@@ -1,15 +1,10 @@
 import Cell from "./Cell";
 
-interface BoardProps {
-  cells: (string | null)[];
-  onMove: (index: number) => void;
-}
-
-export default function Board({ cells, onMove }: BoardProps) {
+export default function Board({ cells, onMove }: { cells: (string | null)[]; onMove: (i: number) => void }) {
   return (
-    <div className="grid grid-cols-3 grid-rows-3 gap-3 w-full max-w-[320px] sm:max-w-[280px] aspect-square">
-      {cells.map((value, i) => (
-        <Cell key={i} value={value} onClick={() => onMove(i)} />
+    <div className="grid grid-cols-3 gap-3 w-full max-w-[320px] aspect-square">
+      {cells.map((v, i) => (
+        <Cell key={i} value={v} onClick={() => onMove(i)} />
       ))}
     </div>
   );

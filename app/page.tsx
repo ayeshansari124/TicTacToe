@@ -4,36 +4,27 @@ import { useState } from "react";
 import Board from "@/components/Board";
 
 export default function Home() {
-  const [currentPlayer, setCurrentPlayer] = useState<"X" | "O">("X");
   const [cells, setCells] = useState<(string | null)[]>(Array(9).fill(null));
+  const [currentPlayer, setCurrentPlayer] = useState<"X" | "O">("X");
   const [message, setMessage] = useState("");
 
   const winPatterns = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8], // rows
-    [0, 3, 6], [1, 4, 7], [2, 5, 8], // cols
-    [0, 4, 8], [2, 4, 6],            // diagonals
+    [0, 1, 2], [3, 4, 5], [6, 7, 8],
+    [0, 3, 6], [1, 4, 7], [2, 5, 8],
+    [0, 4, 8], [2, 4, 6],
   ];
 
-  const checkWinner = (newCells: (string | null)[]) => {
-    return winPatterns.some(([a, b, c]) =>
-      newCells[a] && newCells[a] === newCells[b] && newCells[a] === newCells[c]
-    );
-  };
+  const checkWinner = (cells: (string | null)[]) =>
+    winPatterns.some(([a, b, c]) => cells[a] && cells[a] === cells[b] && cells[a] === cells[c]);
 
-  const handleMove = (index: number) => {
-    if (cells[index] || message) return;
-
-    const newCells = [...cells];
-    newCells[index] = currentPlayer;
-    setCells(newCells);
-
-    if (checkWinner(newCells)) {
-      setMessage(`${currentPlayer} wins!`);
-    } else if (newCells.every((cell) => cell)) {
-      setMessage("It's a draw!");
-    } else {
-      setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
-    }
+  const handleMove = (i: number) => {
+    if (cells[i] || message) return;
+    const next = [...cells];
+    next[i] = currentPlayer;
+    if (checkWinner(next)) setMessage(`${currentPlayer} wins!`);
+    else if (next.every(Boolean)) setMessage("It's a draw!");
+    else setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
+    setCells(next);
   };
 
   const resetGame = () => {
@@ -43,21 +34,21 @@ export default function Home() {
   };
 
   return (
-    <main className="font-sans bg-gray-500 flex justify-center items-center min-h-screen p-4">
-      <div className="bg-white w-[90vw] sm:w-[70vw] md:w-[40vw] lg:w-[30vw] aspect-[3/4] max-w-[420px] flex flex-col items-center justify-between p-6 sm:p-8 rounded-2xl shadow-xl">
-        <h1 className="text-[rgba(165,42,42,0.978)] text-3xl sm:text-2xl font-bold mb-2 text-center">
+    <main className="flex justify-center items-center min-h-screen p-4">
+      <div className="backdrop-brightness-50 bg-zinc/20 text-white w-[90vw] sm:w-[70vw] md:w-[40vw] lg:w-[28vw] aspect-[3/4] max-w-[420px] rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-between shadow-2xl">
+        <h1 className="text-3xl font-bold text-center mb-2 text-white">
           Tic-Tac-Toe
         </h1>
 
         <Board cells={cells} onMove={handleMove} />
 
-        <div className="bg-white text-[rgba(165,42,42,0.978)] font-serif font-bold text-lg sm:text-base my-3 p-2 text-center rounded-md">
+        <p className="my-3 p-2 bg-black/20 text-[rgba(165,42,42,0.9)] font-semibold rounded-md w-full text-center">
           {message}
-        </div>
+        </p>
 
         <button
           onClick={resetGame}
-          className="bg-[rgba(165,42,42,0.803)] text-white text-lg sm:text-base px-8 py-3 rounded-lg hover:bg-[rgba(165,42,42,0.978)] transition-all duration-200 w-full sm:w-auto"
+          className="bg-[rgba(165,42,42,0.8)] hover:bg-[rgba(165,42,42,0.95)] cursor-pointer text-white px-8 py-3 rounded-lg transition-all duration-200 w-full sm:w-auto"
         >
           Reset Game
         </button>
