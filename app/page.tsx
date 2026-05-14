@@ -1,54 +1,91 @@
 "use client";
 
 import { useState } from "react";
-import Board from "@/components/Board";
 
 export default function Home() {
-  const [cells, setCells] = useState<(string | null)[]>(Array(9).fill(null));
-  const [currentPlayer, setCurrentPlayer] = useState<"X" | "O">("X");
-  const [message, setMessage] = useState("");
+  const [board, setBoard] = useState<(string | null)[]>(Array(9).fill(null));
 
-  const winPatterns = [
-    [0, 1, 2], [3, 4, 5], [6, 7, 8],
-    [0, 3, 6], [1, 4, 7], [2, 5, 8],
-    [0, 4, 8], [2, 4, 6],
+  const [player, setPlayer] = useState<"X" | "O">("X");
+
+  const wins = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
   ];
 
-  const checkWinner = (cells: (string | null)[]) =>
-    winPatterns.some(([a, b, c]) => cells[a] && cells[a] === cells[b] && cells[a] === cells[c]);
+  const winner = wins.find(
+    ([a, b, c]) => board[a] && board[a] === board[b] && board[a] === board[c],
+  );
 
-  const handleMove = (i: number) => {
-    if (cells[i] || message) return;
-    const next = [...cells];
-    next[i] = currentPlayer;
-    if (checkWinner(next)) setMessage(`${currentPlayer} wins!`);
-    else if (next.every(Boolean)) setMessage("It's a draw!");
-    else setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
-    setCells(next);
+  const message = winner
+    ? `${board[winner[0]]} wins!`
+    : board.every(Boolean)
+      ? "It's a draw!"
+      : `Turn: ${player}`;
+
+  const handleClick = (i: number) => {
+    if (board[i] || winner) return;
+
+    const next = [...board];
+
+    next[i] = player;
+
+    setBoard(next);
+
+    setPlayer(player === "X" ? "O" : "X");
   };
 
   const resetGame = () => {
-    setCells(Array(9).fill(null));
-    setCurrentPlayer("X");
-    setMessage("");
+    setBoard(Array(9).fill(null));
+
+    setPlayer("X");
   };
 
   return (
-    <main className="flex justify-center items-center min-h-screen p-4">
-      <div className="backdrop-brightness-50 bg-zinc/20 text-white w-[90vw] sm:w-[70vw] md:w-[40vw] lg:w-[28vw] aspect-[3/4] max-w-[420px] rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-between shadow-2xl">
-        <h1 className="text-3xl font-bold text-center mb-2 text-white">
+    <main className="min-h-screen flex items-center justify-center px-4">
+      <div className="w-full max-w-md bg-black/55 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-2xl">
+        <h1 className="text-4xl font-black text-center text-white mb-2">
           Tic-Tac-Toe
         </h1>
 
-        <Board cells={cells} onMove={handleMove} />
+        <p className="text-center text-white/70 mb-8">{message}</p>
 
-        <p className="my-3 p-2 bg-black/20 text-[rgba(165,42,42,0.9)] font-semibold rounded-md w-full text-center">
-          {message}
-        </p>
+        <div className="grid grid-cols-3 gap-4">
+          {board.map((cell, i) => (
+            <button
+              key={i}
+              onClick={() => handleClick(i)}
+              className="
+                w-full aspect-square
+                rounded-2xl
+                bg-purple-900/70
+                hover:bg-purple-800/80
+                border border-white/10
+                text-5xl font-bold text-white
+                transition
+                active:scale-95
+                flex items-center justify-center
+              "
+            >
+              {cell}
+            </button>
+          ))}
+        </div>
 
         <button
           onClick={resetGame}
-          className="bg-[rgba(165,42,42,0.8)] hover:bg-[rgba(165,42,42,0.95)] cursor-pointer text-white px-8 py-3 rounded-lg transition-all duration-200 w-full sm:w-auto"
+          className="
+            w-full mt-8 py-3
+            rounded-2xl
+            bg-red-700 hover:bg-red-800
+            text-white font-semibold
+            transition
+          "
         >
           Reset Game
         </button>
