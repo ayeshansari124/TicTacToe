@@ -1,39 +1,71 @@
-# ❌⭕ Tic-Tac-Toe Game
+# ❌⭕ Tic-Tac-Toe
 
-A simple and interactive **Tic-Tac-Toe game** built with **HTML, CSS, and JavaScript**.  
-Play against a friend in this classic 3x3 grid game where the goal is to get three in a row — horizontally, vertically, or diagonally.
+A modern Tic-Tac-Toe web application built using **Next.js, React, TypeScript, and Tailwind CSS**.
 
----
+Designed with a responsive interface and smooth gameplay experience, the application focuses on interactive frontend functionality, real-time UI updates, and clean component-driven architecture.
 
-## 🚀 Features
-- 🎮 Two-player mode (Player X vs Player O)  
-- 🖥️ Responsive UI with clean design  
-- 🔄 Restart button to reset the game anytime  
-- 🏆 Winner announcement & draw detection  
-- ⚡ Lightweight and fast (vanilla JS, no frameworks)  
+## 🌐 Live Demo
+
+https://tic-tac-toe-two-psi-40.vercel.app/
 
 ---
 
-## 🛠️ Tech Stack
-- **HTML5** – Game structure  
-- **CSS3** – Styling and layout  
-- **JavaScript (Vanilla)** – Game logic  
+## ✨ Features
+
+- Fully playable Tic-Tac-Toe game
+- Dynamic turn switching
+- Win detection system
+- Reset game functionality
+- Responsive layout
+- Modern UI design
+- Real-time board updates
+- Component-based architecture
 
 ---
 
-## Roadmap
+## 🚀 Tech Stack
 
-- Two-player mode
-- Add AI opponent (single-player mode)
-- Add score tracking system
-- Add animations and sound effects
-
----
-
-## 🤝 Contribution
-
-- Contributions are welcome!
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
 
 ---
 
-## Built with ❤️ by Ayesha
+## 📸 Screenshots
+
+![Game UI](./screenshots/tic-tac-toe.png)
+
+---
+
+## 🧠 What I Learned
+
+- React state management
+- Conditional rendering
+- Game logic implementation
+- Handling dynamic UI updates
+- Managing user interactions
+- Structuring applications with Next.js
+- Building responsive interfaces using Tailwind CSS
+
+This project helped improve my understanding of interactive frontend application development and real-time state-driven UI behavior.
+
+---
+
+## 💡 Future Improvements
+
+- Multiplayer support
+- AI opponent
+- Score tracking
+- Match history
+- Sound effects and animations
+- Online gameplay
+- Difficulty levels
+
+---
+
+## 👩‍💻 Author
+
+**Ayesha Ansari**
+
+Built with ❤️ using Next.js and Tailwind CSS
