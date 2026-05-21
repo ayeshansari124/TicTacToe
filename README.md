@@ -34,7 +34,7 @@ https://tic-tac-toe-two-psi-40.vercel.app/
 
 ## 📸 Screenshots
 
-![Game UI](./screenshots/tic-tac-toe.png)
+![Game UI](tic-tac-toe.png)
 
 ---
 
